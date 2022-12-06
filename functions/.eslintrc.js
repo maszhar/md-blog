@@ -9,6 +9,18 @@ module.exports = {
     "google",
   ],
   rules: {
-    quotes: ["error", "double"],
+    "quotes": ["error", "double"],
+    "new-cap": "off",
   },
+  overrides: [
+    {
+      files: "**/*.spec.js",
+      env: {
+        mocha: true,
+      },
+      rules: {
+        "no-unused-vars": "off",
+      },
+    },
+  ],
 };
